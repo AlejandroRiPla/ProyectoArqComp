@@ -1,11 +1,26 @@
-//Método de Inserción
 #include<stdio.h>
 void Insercion(int m[],int n_elementos);
-int m[]={25,2,7,3,67,43,1,15,9,32};
+int m[]={25,32,250,98,3,12,60,8,75,25};
 int main()
 {
-  Insercion(m,10);
+  int minimo,maximo;
+  minimo = calcularMinimo(m,10);
+  maximo = calcularMaximo(m,10);
+  printf("\n%d - %d",minimo,maximo);
+  
   return(0);
+}
+int calcularMinimo(int m[],int n_elementos){
+  int min;
+  Insercion(m,n_elementos);
+  min=m[0];
+  return min;
+}
+int calcularMaximo(int m[],int n_elementos){
+  int max;
+  Insercion(m,n_elementos);
+  max=m[n_elementos-1];
+  return max;
 }
 
 void Insercion(int m[],int n_elementos)
@@ -26,3 +41,4 @@ void Insercion(int m[],int n_elementos)
     }
 
 }
+
