@@ -1,13 +1,18 @@
 #include<stdio.h>
-void Insercion(int m[],int n_elementos);
-int m[]={25,32,250,98,3,12,60,8,75,25};
+#define ELEMENTOS 10
+
+void Insercion(int [],int);
+int calcularMinimo(int [],int);
+int calcularMaximo(int[],int);
+
+int m[ELEMENTOS]={25,32,250,98,3,12,60,8,75,25};
+
 int main()
 {
   int minimo,maximo;
-  minimo = calcularMinimo(m,10);
-  maximo = calcularMaximo(m,10);
-  printf("\n%d - %d",minimo,maximo);
-  
+  minimo = calcularMinimo(m,ELEMENTOS);
+  maximo = calcularMaximo(m,ELEMENTOS);
+
   return(0);
 }
 int calcularMinimo(int m[],int n_elementos){
@@ -41,4 +46,5 @@ void Insercion(int m[],int n_elementos)
     }
 
 }
+
 
